@@ -1,0 +1,24 @@
+{
+  "name": "leetcode-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local LeetCode company-tracker with a Postgres-backed progress store",
+  "main": "server.js",
+  "scripts": {
+    "build": "esbuild src/index.jsx --bundle --outfile=public/dist/bundle.js --minify --sourcemap",
+    "watch": "esbuild src/index.jsx --bundle --outfile=public/dist/bundle.js --sourcemap --watch",
+    "prestart": "npm run build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
